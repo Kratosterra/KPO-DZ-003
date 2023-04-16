@@ -112,7 +112,6 @@ public class RandomStudent {
                 name = rs.getString("name");
             }
 
-            // Update the student's attendance flag to true
             stmt = conn.prepareStatement("UPDATE students SET attended = true WHERE name = ?");
             stmt.setString(1, name);
             stmt.executeUpdate();
